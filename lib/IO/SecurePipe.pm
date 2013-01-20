@@ -42,7 +42,7 @@ sub _doit {
         }
         bless $io, "IO::Handle";
         $io->fdopen($fh, $mode);
-	$fh->close;
+        $fh->close;
 
         if ($do_spawn) {
           $pid = eval { system 1, @_ }; # 1 == P_NOWAIT
